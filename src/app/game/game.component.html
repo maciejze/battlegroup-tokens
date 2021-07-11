@@ -1,0 +1,9 @@
+<h2>game {{gameId}}</h2>
+<button (click)="drawToken()">Draw token</button>
+<div>
+  <ul>
+    <li *ngFor="let token of tokens">
+      {{token.name}} BR{{token.value}}
+    </li>
+  </ul>
+</div>
