@@ -29,6 +29,9 @@ export class GameComponent implements OnInit {
   drawToken(): void {
     this.gamesService.drawToken(this.gameId).subscribe(token => {
       this.tokens.push(token);
+      this.tokens.sort((a,b) => {
+        return (a.value || 0) - (b.value || 0 )
+      })
       localStorage.setItem(`tokens-${this.gameId}`, JSON.stringify(this.tokens));
       this.lastToken = token;
       this.tokenModalVisibility.visible = true;

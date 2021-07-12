@@ -17,12 +17,12 @@ import { LinkModalComponent } from './components/link-modal/link-modal.component
     HomeComponent,
     GameComponent,
     TokenModalComponent,
-    LinkModalComponent
+    LinkModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [ApiService, GamesService],
   bootstrap: [AppComponent]
