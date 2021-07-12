@@ -1,7 +1,9 @@
 
 <div class="actions-container">
-  <button (click)="drawToken()">Draw token</button>
+  <button class="btn-primary" (click)="drawToken()">Draw token</button>
+  <button (click)="getLink()">Get link</button>
 </div>
+<p>Total battle rating lost: {{getTotalRating()}}</p>
 <div class="tokens">
   <ul>
     <li class="token" *ngFor="let token of tokens">
@@ -9,6 +11,6 @@
     </li>
   </ul>
 </div>
-<app-token-modal [visibility]="modalVisibility" [token]="lastToken">
+<app-token-modal [visibility]="tokenModalVisibility" [token]="lastToken">
 
 </app-token-modal>

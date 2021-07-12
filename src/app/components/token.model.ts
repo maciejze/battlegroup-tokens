@@ -1,4 +1,4 @@
 export interface Token {
   name?: string;
-  value?: string;
+  value?: number;
 }

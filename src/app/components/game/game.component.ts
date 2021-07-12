@@ -13,7 +13,7 @@ export class GameComponent implements OnInit {
   gameId: string = '';
   tokens: Array<Token> = [];
   lastToken: Token = {};
-  modalVisibility = {visible: false};
+  tokenModalVisibility = {visible: false};
   constructor(private route: ActivatedRoute, private gamesService: GamesService) { }
 
   ngOnInit(): void {
@@ -31,8 +31,19 @@ export class GameComponent implements OnInit {
       this.tokens.push(token);
       localStorage.setItem(`tokens-${this.gameId}`, JSON.stringify(this.tokens));
       this.lastToken = token;
-      this.modalVisibility.visible = true;
+      this.tokenModalVisibility.visible = true;
     })
   }
 
+  getLink(): void {
+    window.prompt("Share this link", window.location.href);
+  }
+
+  getTotalRating(): number {
+    let sum = 0;
+    this.tokens.forEach(item => {
+      sum += item.value || 0;
+    });
+    return sum;
+  }
 }

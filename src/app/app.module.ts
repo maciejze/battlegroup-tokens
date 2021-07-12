@@ -9,13 +9,15 @@ import {GamesService} from "./service/games.service";
 import { TokenModalComponent } from './components/token-modal/token-modal.component';
 import {HomeComponent} from "./components/home/home.component";
 import {GameComponent} from "./components/game/game.component";
+import { LinkModalComponent } from './components/link-modal/link-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     GameComponent,
-    TokenModalComponent
+    TokenModalComponent,
+    LinkModalComponent
   ],
   imports: [
     BrowserModule,
