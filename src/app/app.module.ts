@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import {ApiService} from "./service/api.service";
 import {HttpClientModule} from "@angular/common/http";
 import {GamesService} from "./service/games.service";
-import { HomeComponent } from './home/home.component';
-import { GameComponent } from './game/game.component';
+import { TokenModalComponent } from './components/token-modal/token-modal.component';
+import {HomeComponent} from "./components/home/home.component";
+import {GameComponent} from "./components/game/game.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    GameComponent
+    GameComponent,
+    TokenModalComponent
   ],
   imports: [
     BrowserModule,

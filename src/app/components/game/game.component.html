@@ -1,0 +1,14 @@
+
+<div class="actions-container">
+  <button (click)="drawToken()">Draw token</button>
+</div>
+<div class="tokens">
+  <ul>
+    <li class="token" *ngFor="let token of tokens">
+      {{token.name}}
+    </li>
+  </ul>
+</div>
+<app-token-modal [visibility]="modalVisibility" [token]="lastToken">
+
+</app-token-modal>

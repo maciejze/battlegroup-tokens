@@ -1,0 +1,7 @@
+<div class="overlay" [class.visible]="visibility.visible"></div>
+<div class="token-modal" [class.visible]="visibility.visible">
+  <div class="token">
+    {{token.name}}
+  </div>
+  <button (click)="visibility.visible = false">OK</button>
+</div>

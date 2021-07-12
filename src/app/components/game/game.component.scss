@@ -1,0 +1,31 @@
+@import '../../../variables';
+:host {
+  text-align: center;
+}
+
+.actions-container {
+  margin: 30px 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap
+}
+
+.token {
+  border: 1px solid $green;
+  color: white;
+  background-color: $green;
+  border-radius: 3px;
+  font-weight: 600;
+  padding: 25px;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

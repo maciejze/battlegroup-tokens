@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {ApiService} from "./api.service";
 import {Observable} from "rxjs";
+import {Token} from "../components/token.model";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class GamesService {
     return this.api.get('new');
   }
 
-  drawToken(gameId: string): Observable<any> {
+  drawToken(gameId: string): Observable<Token> {
     return this.api.get('draw/' + gameId)
   }
 }
