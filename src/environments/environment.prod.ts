@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "https://battlegroup-tokens-backend.herokuapp.com/api/"
+  apiUrl: "https://zetony-macieja.herokuapp.com/api/"
 };
