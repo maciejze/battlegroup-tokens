@@ -10,8 +10,8 @@ export class GamesService {
 
   constructor(private api: ApiService) { }
 
-  createNewGame(): Observable<any> {
-    return this.api.get('new');
+  createNewGame(type: string): Observable<any> {
+    return this.api.get(`new/${type}`, );
   }
 
   drawToken(gameId: string): Observable<Token> {

@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createNewGame(): void {
-    this.gamesService.createNewGame().subscribe(next => {
+  createNewGame(type: string): void {
+    this.gamesService.createNewGame(type).subscribe(next => {
 
       this.router.navigate(['game'], {queryParams: {id: next.id}})
     })
